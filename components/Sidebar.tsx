@@ -5,7 +5,6 @@ import {
   List,
   ListIcon,
   ListItem,
-  Text,
 } from "@chakra-ui/layout";
 import Link from "next/link";
 import { MdHome, MdSearch, MdLibraryMusic } from "react-icons/md";
