@@ -3,14 +3,14 @@ import jwt from "jsonwebtoken";
 import cookie from "cookie";
 import { PrismaClient } from "@prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
+import { EXPIRES_IN, TOKEN_KEY } from "./utils/jwt";
+import { COOKIE_HEADER } from "./utils/cookie";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const prisma = new PrismaClient();
   const salt = bcrypt.genSaltSync();
   const { email, password } = req.body;
 
-  const TOKEN_KEY = "hello";
-  const COOKIE_HEADER = "SPOTIFY_CLONE_ACCESS_TOKEN";
   let user;
 
   try {
@@ -34,7 +34,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       time: Date.now(),
     },
     TOKEN_KEY,
-    { expiresIn: "8h" }
+    { expiresIn: EXPIRES_IN }
   );
 
   res.setHeader(
