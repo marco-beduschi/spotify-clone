@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/layout";
-import Sidebar from "./Sidebar.js";
+import Sidebar from "./Sidebar";
 
 const PLAYER_HEIGHT = "100px";
 
