@@ -8,7 +8,7 @@ const AuthForm: FC<{ mode: "signup" | "signin" }> = ({ mode }) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
+  
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
