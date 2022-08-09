@@ -1,8 +1,14 @@
-import { Box } from "@chakra-ui/layout";
 import GradientLayout from "../components/GradientLayout";
 
 const Home = () => {
-  return <GradientLayout color="green" />;
+  return (
+    <GradientLayout
+      color="green"
+      section="Playlist"
+      title="Playlist Name"
+      subtitle="Description of playlist"
+    />
+  );
 };
 
 export default Home;
