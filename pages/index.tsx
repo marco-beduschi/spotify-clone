@@ -7,7 +7,9 @@ const Home = () => {
       section="Playlist"
       title="Playlist Name"
       subtitle="Description of playlist"
-    />
+    >
+      Hello
+    </GradientLayout>
   );
 };
 
